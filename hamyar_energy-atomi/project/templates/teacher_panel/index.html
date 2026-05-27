@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static' , filename='img/atom.svg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='teacher_panel/style.css') }}">
+    <title>همیار اتمی</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="profile" onclick="click()">
+                <img src="{{ url_for('static' , filename='img/circle user.svg') }}" alt="">
+                <p>{{ name }}</p>
+            </div>
+            <ul>
+                <li class='d1'><a href="#homework">ثبت تکلیف </a></li>
+                <li class='d2'><a href="#comment"> انتقادات و پیشنهادات</a></li>
+                <button class="btn-color">تم روز</button>
+                <img src="{{ url_for('static' , filename='img/Untitled-1.png') }}" class="gg" id="gg">
+
+            </ul>
+        </nav>
+    </section>
+
+    <section class="container">
+        <div class="item" id="homework">
+            <form action="teacher_panel/homework/submit" method="post" enctype="multipart/form-data">
+                <h1> ثبت تکلیف </h1>
+                <div class="input_place">
+                    <div class="item">
+                        <p>درس</p>
+                        <select name="Class" id="">
+                            <option value="ریاضی">ریاضی</option>
+                            <option value="فیزیک">فیزیک</option>
+                            <option value="شیمی">شیمی</option>
+                            <option value="زیست">زیست</option>
+                            <option value="ادبیات">ادبیات</option>
+                            <option value="مطالعات اجتماعی">مطالعات اجتماعی</option>
+                            <option value="زمین شناسی">زمین شناسی</option>
+                            <option value="تفکر و سبک زندگی">کار و فناوری</option>
+                            <option value="تفکر و سبک زندگی">تفکر و سبک زندگی</option>
+                            <option value="پیام های آسمانی">پیام های آسمانی</option>
+                            <option value="پیام های آسمانی">قران</option>
+                            <option value="عربی">عربی</option>
+
+                        </select>
+                    </div>
+                    <div class="item">
+                        <p>کلاس</p>
+                        <select name="grade">
+                            <option value="seven_1">هفتم1</option>
+                            <option value="seven_2">هفتم2</option>
+                            <option value="seven_3">هفتم3</option>
+                            <option value="eight_1">هشتم1</option>
+                            <option value="eight_2">هشتم2</option>
+                            <option value="eight_3">هشتم3</option>
+                            <option value="nine_1">نهم1</option>
+                            <option value="nine_2">نهم2</option>
+                            <option value="nine_3">نهم3</option>
+                        </select>
+                    </div>
+                    <div class="item">
+                        <p>توضیحات</p>
+                        <textarea name="homework" id=""></textarea>
+                    </div>
+                </div>
+                <button type="submit">ثبت تکلیف</button>
+            </form>
+
+        </div>
+
+        <div class="item" id="comment">
+            <h1>دیدن انتقادات و پیشنهادات</h1>
+            <div class="show_comment">
+                <div class="comment">
+                    {% for item in comment %}
+                    <div class="box">
+                        <h1>{{item.title}}</h1>
+                        <p>{{item.comments}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <center>
+                <h5>ساخته شده توسط آرتین جاهدجاه و کیاوش صفری</h5>
+            </center>
+        </div>
+    </section>
+
+</body>
+<script src="{{ url_for('static' , filename='teacher_panel/js/script.js') }}"></script>
+
+
+</html>

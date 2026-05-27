@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static' , filename='img/atom.svg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='404/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="{{ url_for('static' , filename='img/404 error.svg') }}" alt="">  
+
+            <div class="inner">
+                <h1>صفحه مورد نظر پیدا نشد</h1>
+                <a href="/">برای بازگشت به خانه کلیک کنید</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

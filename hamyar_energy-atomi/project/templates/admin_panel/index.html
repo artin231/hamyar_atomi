@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static' , filename='img/atom.svg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='admin_panel/style.css') }}">
+    <title>همیار اتمی</title>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <div class="profile" onclick="click()">
+                <img src="{{ url_for('static' , filename='img/circle user.svg') }}" alt="">
+                <p>{{ name }}</p>
+            </div>
+            <ul>
+                <li class='d1'><a href="#news">ثبت خبر </a></li>
+                <li class='d2'><a href="#comment"> انتقادات و پیشنهادات</a></li>
+                <li class='d3'><a href="#apsence">ثبت غیبت ها</a></li>
+                <button class="btn-color">تم روز</button>
+                <img src="{{ url_for('static' , filename='img/Untitled-1.png') }}" class="gg" id="gg">
+
+            </ul>
+        </nav>
+    </section>
+
+    <section class="container">
+        <div class="item" id="news">
+            <form action="admin_panel/news/submit" class="form_news" method="post">
+                <h1> ثبت خبر </h1>
+                <div class="input_place">
+                    <div class="item">
+                        <p>موضوع</p>
+                        <input class="title" type="text" name="title" required>
+                    </div>
+                    <div class="item">
+                        <p>توضیحات</p>
+                        <textarea class="news" name="news" required></textarea>
+                        <h5 class="hidden">باید تعداد کلمات بیشتر از یک باشد</h5>
+                    </div>
+                </div>
+                <button id='btn_sub'  type="submit">ثبت خبر</button>
+            </form>
+        </div>
+
+        <div class="item" id="comment">
+            <h1>دیدن انتقادات و پیشنهادات</h1>
+            <div class="show_comment">
+                <div class="comment">
+                    {% for item in comment %}
+                    <div class="box">
+                        <h1>{{item.title}}</h1>
+                        <p>{{item.comments}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="apsence">
+            <div class="inner">
+                <form action="/admin_panel/apsence/submit" method="post">
+                    <h1>ثبت غیبت</h1>
+                    <div class="input_place">
+                        <div class="item">
+                            <p>روز غیبت</p>
+                            <input type="text" name="time" required>
+                        </div>
+                        <div class="item">
+                            <p>نام دانش آموز</p>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="item">
+                            <p>نام خانوداگی دانش آموز</p>
+                            <input type="text" name="lastname" required>
+                        </div>
+                        <div class="item">
+                            <p>کلاس دانش آموز</p>
+                            <select name="grade">
+                                <option value="seven_1">هفتم1</option>
+                                <option value="seven_2">هفتم2</option>
+                                <option value="seven_3">هفتم3</option>
+                                <option value="eight_1">هشتم1</option>
+                                <option value="eight_2">هشتم2</option>
+                                <option value="eight_3">هشتم3</option>
+                                <option value="nine_1">نهم1</option>
+                                <option value="nine_2">نهم2</option>
+                                <option value="nine_3">نهم3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit">ثبت غیبت</button>
+                </form>
+            </div>
+
+        </div>
+<!--	<div class="item" id="apsence_reason">-->
+<!--		<div class="show">-->
+<!--			<h1 class='title'> دیدن دلیل غیبت ها  </h1>-->
+<!--			<div class='reasons'>-->
+<!--				{% for i in apcen %}-->
+<!--					<div class='box'>-->
+<!--						<h1> {{i.student_name}} </h1>-->
+<!--						<p> {{i.reason}} </p>-->
+<!--					</div>-->
+<!--				{% endfor  %}-->
+<!--			</div>-->
+<!--		</div>	    -->
+<!--	</div>-->
+    </section>
+
+</body>
+<script src="{{ url_for('static' , filename='admin_panel/js/script.js') }}"></script>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static' , filename='img/atom.svg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static' , filename='student_panel/style.css') }}">
+    <title>همیار اتمی</title>
+</head>
+
+<body id="b">
+    <section class="header">
+        <nav>
+            <div class="profile" onclick="click()">
+                <img src="{{ url_for('static' , filename='img/circle user.svg') }}" alt="">
+                <p>{{ name }}</p>
+            </div>
+            <ul>
+                <li class="d2"><a href="#news">دیدن خبر ها</a></li>
+                <li class="d1"><a href="#comments">ثبت انتقادات و پیشنهادات</a></li>
+                <li class="d3"><a href="#apsence">دیدن غیبت ها</a></li>
+                <li class="d4"><a href="#homework">دیدن تکالیف</a></li>
+                <li class="d5"><a href="#ai">صحبت با هوش مصنوعی</a></li>
+                <button class="btn-color">تم روز</button>
+                <img src="{{ url_for('static' , filename='img/Untitled-1.png') }}" class="gg" id="gg">
+
+
+            </ul>
+        </nav>
+    </section>
+
+    <section class="container">
+        <div class="item" id="news">
+            <div class="show_news">
+                <h1>دیدن خبر ها</h1>
+                <div class="news">
+                    {% if news | length == 0 %}
+                    <center>
+                        <h1 style="margin-top: 50%;"> خبری نیست </h1>
+                    </center>
+                    {% else %}
+                    {% for item in news %}
+                    <div class="box">
+                        <h1>{{item.name}}</h1>
+                        <p>{{item.news}}</p>
+                    </div>
+
+                    {% endfor %}
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+
+        <div class="item" id="comments">
+            <h1>ثبت انتقادات و پیشنهادات</h1>
+            <form action="student_panel/comments/submit" و method="post">
+                <h1> ثبت انتقادات و پیشنهادات</h1>
+                <div class="input_place">
+                    <div class="item">
+                        <p>موضوع</p>
+                        <input type="text" name="title" required>
+                    </div>
+                    <div class="item">
+                        <p>توضیحات</p>
+			<textarea id="com" type="text" name="comments" requied></textarea>
+                        <h5 class="hidden">باید تعداد کلمات بیشتر از یک باشد</h5>
+
+                    </div>
+                </div>
+                <button id='btn_sub'  type="submit">ثبت انتقادات و پیشنهادات</button>
+            </form>
+        </div>
+        <div class="item" id="apsence">
+            <div class="t">
+                <h1>دیدن غیبت ها</h1>
+            </div>
+            {% if apcense | length == 0 %}
+            <div class="no">
+                <h1 style="color: aliceblue;">غیبتی نداشتی</h1>
+            </div>
+            {% else %}
+
+
+            <div class="show">
+                {% for item in apcense %}
+                {% if item.student_name == session.get('name') and item.student_lastname == session.get('lastname') and item.student_grade == session.get('grade') %}
+                <div class="box">
+                    <h1> {{ item.time }} </h1>
+                    <h4> {{ item.student_name }} {{ item.student_lastname }}</h4>
+<!--		    <form action='/student_panel/reason/submit' method='post'>-->
+<!--		    	<textarea name='reason'  class='dalil' placeholder='نوشتن دلیل نیامدن'></textarea>-->
+<!--			<button type='submit'>ارسال دلیل</button>-->
+<!--		    </form>-->
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+
+        </div>
+        <div class="item" id="homework">
+            <h1>دیدن تکالیف</h1>
+            {% if homework | length == 0 %}
+            <center>
+                <h1>تکلیفی نداری</h1>
+            </center>
+            {% else %}
+            <div class="show_homework">
+                {% for item in homework %}
+                {% if item.grade == grade %}
+                <div class="box">
+                    <h1>{{ item.Class }}</h1>
+                    <p>{{ item.homework }}</p>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <div class="item" id="ai">
+            <div class="inner">
+                <form action="/student_panel/ai/submit">
+                    <h1>صحبت با هوش مصنوعی</h1>
+                    <div class="input_place">
+                        <div class="item">
+                            <p>پیام ارسالی</p>
+                            <input type="text" name="text" required>
+                        </div>
+                        <div class="item">
+                            <p>پیام بازگشتی</p>
+                            <div class="ai">
+                                <p>{{ ai }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit">ثبت پیام</button>
+                </form>
+            </div>
+            <center>
+                <h5>ساخته شده توسط آرتین جاهدجاه و کیاوش صفری</h5>
+            </center>
+        </div>
+    </section>
+
+</body>
+<script src="{{ url_for('static' , filename='student_panel/js/script.js') }}"></script>
+
+</html>

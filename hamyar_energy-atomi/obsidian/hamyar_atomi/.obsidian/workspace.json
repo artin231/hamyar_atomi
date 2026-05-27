@@ -1,0 +1,199 @@
+{
+  "main": {
+    "id": "415e31eb6d40b740",
+    "type": "split",
+    "children": [
+      {
+        "id": "20b911235e5e0cd2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "234272ab627cf9af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ویژگی ها.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ویژگی ها"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "04248576f23e412d",
+    "type": "split",
+    "children": [
+      {
+        "id": "f951a3429063aed7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d950d70a784923ff",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "byCreatedTimeReverse",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "c62d45bfdad9dfbf",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c9c41b19e0901506",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "4e35673ce7312f93",
+    "type": "split",
+    "children": [
+      {
+        "id": "2d2ca858df998381",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70862c79a8b90a56",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "دیتا بیس.md",
+                "collapseAll": false,
+                "extraContext": true,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for دیتا بیس"
+            }
+          },
+          {
+            "id": "2bdf7b1648e7d56c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "دیتا بیس.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from دیتا بیس"
+            }
+          },
+          {
+            "id": "f92df2fecf244014",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "d9db2b18398c4e4c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "36b504f7a8cc260a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "دیتا بیس.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of دیتا بیس"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "234272ab627cf9af",
+  "lastOpenFiles": [
+    "دیتا بیس.md",
+    "Untitled.base",
+    "Untitled",
+    "Untitled.canvas",
+    "ویژگی ها.md",
+    "big api.md",
+    "Untitled 1.canvas",
+    "2026-04-19.md",
+    "create a link.md"
+  ]
+}
