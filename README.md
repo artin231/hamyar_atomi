@@ -1,5 +1,14 @@
-# hamyar_atomi
-this is a site for enrgy_atomi school to help the teachers and students and personels
-this site is made with html,css,javascript,python(django framework)
-    
-<h1>now we are just making the fronend of this site and not the backend but we will start the backend soon with django FrameWork</h1>
+<h1>Importand, this project is not finished</h1>
+
+<h1>
+Hamyar Atomi Version2
+</h1>
+
+<h3>what is hamyar atomi?</h3>
+<p>hamayr atomi is a site for energy atomi school that helps the teachers , students , school manager and personels</p>
+
+<h3>what is hamyar atmoi version 1 ?</h3>
+<p>hamyar atomi version 1 was the first version of this project but it wasn't in guthub</p>
+
+<h3>what is the difference between hamyar_atomi_vesion1 and hamyar_atomi_vesion2?</h3>
+<p>hamyar_atomi_version1 was made with flask but hamyar_atomi_version2 is made with django </p>
