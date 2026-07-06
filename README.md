@@ -12,3 +12,8 @@ Hamyar Atomi Version2
 
 <h3>what is the difference between hamyar_atomi_vesion1 and hamyar_atomi_vesion2?</h3>
 <p>hamyar_atomi_version1 was made with flask but hamyar_atomi_version2 is made with django </p>
+
+<h3>what are we now dooing:</h3>
+<li>adding django apps</li>
+<li>moving the template files</li>
+<li>moving the static files</li>
