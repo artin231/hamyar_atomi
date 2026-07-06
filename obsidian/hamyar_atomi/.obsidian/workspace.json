@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -187,11 +186,11 @@
   "active": "234272ab627cf9af",
   "lastOpenFiles": [
     "دیتا بیس.md",
+    "ویژگی ها.md",
+    "big api.md",
     "Untitled.base",
     "Untitled",
     "Untitled.canvas",
-    "ویژگی ها.md",
-    "big api.md",
     "Untitled 1.canvas",
     "2026-04-19.md",
     "create a link.md"
