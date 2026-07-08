@@ -23,3 +23,13 @@ Hamyar Atomi Version2
 <li>obsidian => the obsidian files</li>
 <li>modeling_db => in this directory you can see the tables of the db</li>
 <li>just_front => this directory is the version without backend but it has jinja tags from the flask framework</li>
+
+<h3>all the project apps</h3>
+<li>apcense => the student apcense</li>
+<li>barname => the student classes</li>
+<li>comments => the student comments</li>
+<li>exam => the student exams</li>
+<li>homework => the student homeworks</li>
+<li>jashnvare => the student festivals</li>
+<li>rooidad => the student events</li>
+<li>student,all the aps start with personel,shcoolmanager,teacher => the shcool posts</l>
