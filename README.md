@@ -18,13 +18,13 @@ Hamyar Atomi Version2
 <li>moving the template files</li>
 <li>moving the static files</li>
 
-<h3>all this project directorys:</h3>
-<li>hamyar_atomi => the project is in this folder and we mean the inner directory not the main hamyar atomi directory</li>
+<h3>all the directorys in the main hamyar atomi directory:</h3>
+<li>hamyar_atomi => the project is in this directory</li>
 <li>obsidian => the obsidian files</li>
 <li>modeling_db => in this directory you can see the tables of the db</li>
 <li>just_front => this directory is the version without backend but it has jinja tags from the flask framework</li>
 
-<h3>all the project apps</h3>
+<h3>all the project apps:</h3>
 <li>apcense => the student apcense</li>
 <li>barname => the student classes</li>
 <li>comments => the student comments</li>
