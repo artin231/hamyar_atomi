@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'vazir';
+    src: url(../fonts/Vazirmatn/Vazirmatn-Light.ttf);
+}
+
+::-webkit-scrollbar {
+    background-color: white;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(122, 122, 122);
+}
+
+:root {
+    --color1: #2b2b2b;
+    --color2: #5a5a5a;
+    --color3: #949494;
+    --color_w: white;
+    --color_b: black;
+    scroll-behavior: smooth;
+}
+
+.white {
+    color: white;
+}
+
+.header nav ul .btn-color {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: var(--color_w);
+    border: 1px solid var(--color_b);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'vazir';
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color1);
+    height: 100%;
+    width: 100%;
+    font-family: "vazir";
+}
+
+.header {
+    width: 90%;
+    margin: auto;
+    height: 60px;
+    border-radius: 15px;
+    background-color: rgba(147, 147, 147, 0.4);
+    margin-top: 1%;
+    position: fixed;
+    right: 5%;
+    left: 5%;
+    backdrop-filter: blur(5px);
+}
+
+.header nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1%;
+}
+
+.header nav ul {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2%;
+    direction: rtl;
+}
+
+.header nav ul li {
+    list-style: none;
+}
+
+.header nav ul li a {
+    color: var(--color_w);
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 200ms ease;
+}
+
+.header nav ul li a:hover {
+    color: rgb(0, 255, 0);
+}
+
+.header nav .profile {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    color: var(--color_w);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms linear;
+}
+
+.header nav ul .gg {
+    display: none;
+    width: 60px;
+}
+
+.nav {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10%;
+}
+
+.header nav .profile:hover {
+    transform: translateY(-3%);
+}
+
+.header nav .profile img:first-child {
+    width: 50px;
+
+}
+
+.block {
+    display: block !important;
+}
+
+.pr {
+    height: 20% !important;
+    width: 100% !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+}
+
+.ul {
+    height: 50% !important;
+    width: 100% !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    gap: 15% !important;
+}
+
+.bighead {
+    height: 300px;
+    flex-direction: column;
+    overflow: auto;
+    background-color: rgba(102, 100, 100, 0.788);
+    padding: 2% !important;
+
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container>.item {
+    width: 100%;
+    height: 100vh;
+}
+
+.container #homework {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8%;
+    flex-direction: column;
+    color: var(--color_w);
+}
+
+.container #homework>h1 {
+    font-size: 50px;
+}
+
+.container #homework form {
+    width: 400px;
+    height: 450px;
+    background-color: var(--color2);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7%;
+    padding: 1.5%;
+}
+
+.container #homework form .input_place {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+
+.container #homework form .input_place .item {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+.container #homework form .input_place .item input,
+.container #homework form .input_place .item select,
+.container #homework form .input_place .item textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 3px solid var(--color_w);
+    border-radius: 5px;
+    outline: 0;
+    color: var(--color_w);
+    height: 30px;
+}
+.container #homework form .input_place .item select option{
+	background-color:gray;
+}
+.container #homework form .input_place .item input[name=homework],
+.container #homework form .input_place .item textarea {
+    height: 80px;
+}
+
+.container #homework form button{
+    width: 90%;
+    height: 60px;
+    background-color: transparent;
+    border: 3px solid var(--color_w);
+    border-radius: 5px;
+    color: var(--color_w);
+    font-family: 'vazir';
+    cursor: pointer;
+}
+
+.container #comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color2);
+    flex-direction: column;
+}
+
+.container #comment>h1 {
+    color: var(--color_w);
+    font-size: 50px;
+}
+
+.container #comment .show_comment {
+    width: 100%;
+    height: 500px;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 5%;
+    padding: 1%;
+    color: var(--color_w);
+    margin-top: 5%;
+}
+
+.container #comment .show_comment .comment {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    align-items: center;
+    height: auto;
+}
+
+.container #comment .show_comment .comment .box {
+    width: 90%;
+    height: auto;
+    background-color: var(--color3);
+    color: var(--color_w);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.214);
+    text-align: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+    overflow-x: auto;
+}
+
+@media(max-width:1000px) {
+    .header nav ul li {
+        display: none;
+    }
+
+    .header nav ul li.menu-visible {
+        display: block;
+    }
+
+    .header nav ul .gg {
+        display: block;
+    }
+
+    .profile {
+        width: 100% !important;
+    }
+
+    .header nav ul .btn-color{
+        display: none;
+    }
+}
+
+h5 {
+    color: var(--color_w);
+    margin: 0;
+}

@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'vazir';
+    src: url(../fonts/Vazirmatn/Vazirmatn-ExtraLight.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #3DB158;
+    height: 100vh;
+    width: 100%;
+    font-family: "vazir";
+}
+
+h1,
+p,
+a {
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box{
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    background-color: #13E946;
+    align-items: center;
+}
+.container .box img{
+    width: 40%;
+}
+
+.container .box .inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-items: center;
+}
+.container .box .inner a{
+    color: black;
+}
