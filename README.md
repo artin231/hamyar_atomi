@@ -32,4 +32,5 @@ Hamyar Atomi Version2
 <li>homework => the student homeworks</li>
 <li>jashnvare => the student festivals</li>
 <li>rooidad => the student events</li>
-<li>student,all the aps start with personel,shcoolmanager,teacher => the shcool posts</l>
+<li>student,all the aps start with personel,shcoolmanager,teacher => the shcool posts</li>
+<li>home => the home page and forms</li>
